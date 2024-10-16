@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado del menú */
+.menu {
+    padding: 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para cada sección del menú (hamburguesa, pizza, pasta, ensalada) */
+.menu div {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Imágenes de los productos */
+.menu div img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Títulos de los productos */
+.menu div h3 {
+    font-size: 1.8em;
+    margin: 15px 0;
+    color: #444;
+}
+
+/* Descripciones de los productos */
+.menu div p {
+    font-size: 1em;
+    color: #666;
+    margin: 0 15px 15px 15px;
+}
+
+/* Efecto hover sobre los productos */
+.menu div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos específicos por clase */
+.menu-hamburguesa, .menu-pizza, .menu-pasta, .menu-ensalada {
+    text-align: left;
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .menu div {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+.precio{
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgb(231, 231, 161);
+}
+
+.titulo{
+    text-align: center;
+    background-color: #a35a30;
+}
+h3{
+    text-align: center;
+}
+p{
+    text-align: justify;
+}

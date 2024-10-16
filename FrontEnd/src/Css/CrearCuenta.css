@@ -1,0 +1,85 @@
+/* Estilos generales y para el logo */
+.crear {
+    padding: 40px;
+    background-color: #eae4db; /* Color neutro */
+    text-align: center;
+}
+
+.logocontenedor {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Título de la sección */
+.crear h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #5a4a42; /* Color tierra oscuro */
+}
+
+/* Descripción */
+.crear p {
+    color: #4b3f33; /* Color tierra */
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el formulario de creación de cuenta */
+.formulario {
+    background-color: #fff5e1; /* Fondo neutro claro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.grupo {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.grupo label {
+    display: block;
+    font-size: 1.2em;
+    color: #4b3f33; /* Color tierra */
+    margin-bottom: 5px;
+}
+
+.grupo input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #b29980; /* Borde tierra claro */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.grupo input:focus {
+    outline: none;
+    border-color: #8c6442; /* Borde tierra más oscuro */
+}
+
+/* Botón de creación de cuenta */
+.btncrear {
+    background-color: #8c6442; /* Color tierra */
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btncrear:hover {
+    background-color: #6b4b34; /* Color tierra más oscuro */
+}
+
+
+

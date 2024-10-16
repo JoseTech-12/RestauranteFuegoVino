@@ -1,0 +1,91 @@
+/* Estilos generales y para el logo */
+.reservas {
+    padding: 40px;
+    background-color: #eae4db; /* Color neutro */
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Título de la sección */
+.reservas h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #5a4a42; /* Color tierra oscuro */
+}
+
+/* Estilos para el formulario de reserva */
+.form-reserva {
+    background-color: #fff5e1; /* Color neutro claro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    color: #4b3f33; /* Color tierra */
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #b29980; /* Borde tierra claro */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8c6442; /* Borde tierra más oscuro */
+}
+
+/* Botón de envío */
+.btn-reserva {
+    background-color: #8c6442; /* Color tierra */
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-reserva:hover {
+    background-color: #6b4b34; /* Color tierra más oscuro */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .form-reserva {
+        padding: 20px;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .btn-reserva {
+        font-size: 1em;
+    }
+}
+

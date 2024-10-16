@@ -1,0 +1,17 @@
+
+.navegar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.nav-link:hover{
+ 
+  border-bottom: #C96868 solid 1px;
+
+
+}
+.navbar{
+    height: 50px;
+  
+}

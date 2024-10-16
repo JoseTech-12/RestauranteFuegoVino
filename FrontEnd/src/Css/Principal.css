@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lato:wght@300&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+html{
+    scroll-behavior: smooth
+}
+
+.carousel-item {
+    height: 400px; 
+  }
+  
+  .carousel-item  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center; 
+  }
+
+  .menus{
+    
+    padding: 30px;
+    margin-top: 30px;
+    
+
+  }
+
+.menu1{
+    margin-top: 10px;
+    width: 250px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.menu1:hover{
+    transform: scale(1.02);
+}
+
+.imagenesMenu{
+    width: 150px;
+    border-radius: 4px;
+    height: 130px;
+    margin: 10px 0px;
+}
+
+.verMas{
+    width: 120px;
+    margin: 10px auto;
+ 
+}
+.botonVermas{
+    color: black;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #FADFA1;
+}
+.botonVermas:hover{
+    transform: scale(1.01);
+}
+.titulo-seccion{
+    text-align: center;
+    margin:20px;
+    font-family: "Courgette", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+.contenidoInicial{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.acerca-de{
+    width: 80%;
+    margin: 50px auto;
+   
+}
+.contenido-acerca-de{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.texto-de-acerca-de{
+    text-align: center;
+}
+hr{
+    margin: 0 auto;
+   
+}
+.Ubicacion{
+    width: 80%;
+    margin: 12px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ubicacion-contenido{
+    display: flex;
+    gap: 100px;
+}
+.imagen-ubicacion{
+    width: 600px;
+    height: 500px;
+    border-radius: 20px;
+}
+.imagen-ubicacion:hover{
+    transform: scale(1.01);
+
+}
+.contenedor-reseña{
+    width: 80%;
+    background-color: #fff5e1;
+    display: flex;
+    margin: 20px auto;
+    border-radius: 20px;
+    flex-direction: column;
+   
+
+}
+.foto-perfil img{
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+}
+.conten-datos{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+.reseña1{
+display: flex;
+border-bottom: 1px solid black;
+width: 90%;
+padding: 20px;
+height: 150px;
+margin: 10px auto;
+
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.Ubicacion, .menus, .reseña, .formulario-principal,.servicios{
+    view-timeline-name: --imagen;
+    view-timeline-axis: block;
+     
+    animation-timeline: --imagen;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+
+/* formulario */
+
+
+.formulario-principal{
+  
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+   margin: 50px auto;
+   gap: 20px;
+  
+}
+.contenido-formulario{
+    display: flex;
+    gap: 30px;
+    
+
+}
+.form-principal{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+.inputs-principal{
+    padding: 3px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+textarea{
+    border-radius: 10px;
+    padding: 5px;
+}
+.contenido-texto-formulario{
+    width: 50%;
+}
+
+/* servicios*/
+
+
+.servicios{
+    width: 80%;
+    display: flex;
+    margin: 20px auto;
+     flex-direction: column;
+   
+}
+.contenedor-servicio{
+    display: flex;
+    gap: 30px;
+
+}
+
+.conten-datos-servicios img{
+    width: 500px;
+    height: 300px;
+    border-radius: 13px;
+
+}
+.conten-datos-servicios img:hover{
+    transform: scale(1.01);
+}
+.servicio{
+    background-color: #FADFA1;
+    padding: 30px;
+    border-radius: 13px;
+    margin: 20px;
+
+}
+.boton-reservar{
+    background-color: #C96868 !important;
+    color: white !important;
+}

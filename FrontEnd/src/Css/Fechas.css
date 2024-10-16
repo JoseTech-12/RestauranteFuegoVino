@@ -1,0 +1,81 @@
+/* Estilos generales para la sección de fechas importantes */
+.fechas-importantes {
+    padding: 40px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.fechas-importantes h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Estilos para cada evento */
+.evento {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: left;
+    background-color: #6964646c;
+}
+
+/* Estilos para las imágenes */
+
+.evento img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Estilos para la información del evento */
+.evento-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.evento-info p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.evento-info div {
+    font-size: 1.2em;
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Efecto hover para el evento */
+.evento:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .evento {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .evento img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .evento-info {
+        text-align: center;
+    }
+}

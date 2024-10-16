@@ -1,0 +1,70 @@
+
+.principal {
+    padding: 40px;
+    background-color: #eae4db; 
+    text-align: center;
+}
+
+.logocontenedor {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.principal p {
+    color: #4b3f33; 
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    background-color: #fff5e1; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.grupo {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.grupo label {
+    display: block;
+    font-size: 1.2em;
+    color: #4b3f33; 
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.grupo input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #b29980; /
+}
+
+.grupo input:focus {
+    outline: none;
+    border-color: #8c6442; 
+}
+
+
+.btn-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8b5e3c; 
+    color: #fff; 
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px;
+}
