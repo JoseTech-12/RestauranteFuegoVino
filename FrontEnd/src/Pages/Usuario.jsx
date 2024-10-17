@@ -33,7 +33,7 @@ const Usuario = () => {
                     <div class="menu">
                         <div class="menu-item">
                             <img src={reservas} alt="Reservas" />
-                            <a href='./Reservas'><p>Reservas</p></a>
+                            <a href='./reservar'><p>Reservas</p></a>
                         </div>
                         <div class="menu-item">
                             <img src={menu} alt="Menú" />

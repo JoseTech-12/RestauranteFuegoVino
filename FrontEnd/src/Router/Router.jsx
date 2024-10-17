@@ -34,7 +34,7 @@ const Router = () => {
       <Route path="/Administrador" element={<Administrador />} />
       <Route path="/Menu" element={<Menu />} />
       <Route path="/Fechas" element={<Fechas />} />
-      <Route path="/Reservas" element={<Reservas />} />
+      <Route path="/reservar" element={<Reservas />} />
       <Route path="/RecContra" element={<RecContra />} />
       <Route path="/registrar" element={<CrearCuenta />} />
       <Route path="/MostrarReservas" element={<MostrarReservas />} />

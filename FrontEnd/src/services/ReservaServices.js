@@ -21,12 +21,25 @@ export const register = async (userData) => {
     }
 };
 
+export const reservar = async (userData) => {
+
+    try {
+        const response = await axios.post(`${api}/reservar`, userData)
+        return response.data
+    } catch (error) {
+        console.error('error al realizar la reserva', error)
+        throw error
+    }
+}
+
 
 export const login = async (userData) => {
     try {
         const response = await axios.post(`${api}/login`, userData)
         localStorage.setItem('token', response.data.token)
         localStorage.setItem('nombre', response.data.user.nombre)
+        localStorage.setItem('id', response.data.user.id)
+
         return response.data
 
 
@@ -36,6 +49,8 @@ export const login = async (userData) => {
     }
 
 }
+
 export const logout = () => {
     localStorage.removeItem('token');
+    localStorage.removeItem('nombre')
 };

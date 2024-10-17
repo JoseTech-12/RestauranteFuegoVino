@@ -1,4 +1,4 @@
-import { getAllReservas, registrarUsuario, obtenerUsuario } from "../Model/RestauranteModel.js";
+import { getAllReservas, registrarUsuario, obtenerUsuario, realizarReserva } from "../Model/RestauranteModel.js";
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -7,6 +7,19 @@ const getAllR = async (req, res) => {
     const reservas = await getAllReservas();
     res.json(reservas);
 
+}
+
+const reservar = async (req, res) => {
+    const { id_Cliente, id_Mesa, FechaReserva, NumeroPersonas, Estado, Comentarios } = req.body
+    console.log("datos resivdos")
+
+    try {
+        const response = await realizarReserva(id_Cliente, id_Mesa, FechaReserva, NumeroPersonas, Estado, Comentarios);
+        res.status(201).json(response)
+
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
 }
 
 const registrar = async (req, res) => {
@@ -53,4 +66,4 @@ const login = async (req, res) => {
     }
 };
 
-export { getAllR, login, registrar }
+export { getAllR, login, registrar, reservar }

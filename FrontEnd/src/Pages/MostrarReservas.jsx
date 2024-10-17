@@ -44,7 +44,7 @@ const MostrarReservas = () => {
                     {reservas.map((c) => (
                         <tr key={c.id_Reserva}>
                             <th>{c.id_Reserva}</th>
-                            <td>{c.id_Cliente}</td>
+                            <td>{c.Nombre}</td>
                             <td>{c.id_Mesa}</td>
                             <td>{c.FechaReserva}</td>
                             <td>{c.NumeroPersonas}</td>

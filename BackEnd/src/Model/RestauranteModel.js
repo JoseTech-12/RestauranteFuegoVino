@@ -1,10 +1,11 @@
+
 import { sql } from "../Config/Connection.js";
 import bcrypt from 'bcryptjs';
 
 
 const getAllReservas = async () => {
     try {
-        const reservas = await sql.query('SELECT * FROM Reserva');
+        const reservas = await sql.query('select r.id_Reserva, u.Nombre , r.id_Mesa, r.FechaReserva, r.NumeroPersonas, r.Estado, r.Comentarios from Reserva as r inner join Usuario u on r.id_Cliente = u.id_Cliente');
         return reservas.recordset;
     } catch (error) {
         throw error;
@@ -41,5 +42,25 @@ const obtenerUsuario = async (email) => {
 };
 
 
+const realizarReserva = async (id_Cliente, id_Mesa, FechaReserva, NumeroPersonas, Estado, Comentarios) => {
 
-export { getAllReservas, registrarUsuario, obtenerUsuario }
+    try {
+        const conection = await sql.connect();
+        await conection.request()
+            .input('id_Cliente', sql.Int, id_Cliente)
+            .input('id_Mesa', sql.Int, id_Mesa)
+            .input('FechaReserva', sql.DateTime, FechaReserva)
+            .input('NumeroPersonas', sql.Int, NumeroPersonas)
+            .input('Estado', sql.VarChar, Estado)
+            .input('Comentarios', sql.VarChar, Comentarios)
+            .query('insert into Reserva (id_Cliente, id_Mesa, FechaReserva, NumeroPersonas, Estado, Comentarios) values(@id_Cliente, @id_Mesa,@FechaReserva,@NumeroPersonas,@Estado,@Comentarios)')
+        return 'reserva realizada correctamente'
+    } catch (error) {
+        throw error
+    }
+
+}
+
+
+
+export { getAllReservas, registrarUsuario, obtenerUsuario, realizarReserva }
