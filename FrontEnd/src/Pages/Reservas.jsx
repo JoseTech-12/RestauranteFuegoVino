@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "../Css/Reservas.css"
 import logo from "../assets/logo.png"
 import { reservar } from '../services/ReservaServices'
+import { useNavigate } from 'react-router-dom';
 
 
 const Reservas = () => {
@@ -14,6 +15,7 @@ const Reservas = () => {
     const [Comentarios, setComentarios] = useState('')
     const [mensaje, setMensaje] = useState('');
     const [fechaFormat, setFechaFormat] = useState('')
+    const navigate = useNavigate();
 
 
 
@@ -37,8 +39,11 @@ const Reservas = () => {
             const respose = await reservar(userData)
             setMensaje('reserva realizada correctamente');
             console.log(mensaje)
+            navigate("/Usuario")
+            alert("Reserva realizada correctamente")
+
         } catch (error) {
-            setMensaje('Error al realizar la reserva: ' + error.message); // Muestra el mensaje de error
+            setMensaje('Error al realizar la reserva: ' + error.message);
             console.error('Error al realizar la reserva:', error);
 
         }

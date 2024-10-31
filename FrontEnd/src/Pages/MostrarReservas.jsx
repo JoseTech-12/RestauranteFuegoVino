@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { obtenerReservas } from "../services/ReservaServices.js"
+import { obtenerReservas, eliminar } from "../services/ReservaServices.js"
 import { Await } from "react-router-dom";
 
 const MostrarReservas = () => {
@@ -15,11 +15,21 @@ const MostrarReservas = () => {
         try {
             const listado = await obtenerReservas()
             setReservas(listado)
+
         } catch (error) {
             setError(error)
         }
     }
 
+
+    const handleClickEliminar = () => {
+        try {
+            eliminarReserva = eliminar(id_Reserva)
+        } catch (error) {
+
+        }
+
+    }
 
 
     return (
@@ -51,7 +61,7 @@ const MostrarReservas = () => {
                             <td>{c.Estado}</td>
                             <td>{c.Comentarios}</td>
                             <td><button className="btn">Modificar</button></td>
-                            <td><button className="btn">Eliminar</button></td>
+                            <td><button onClick={handleClickEliminar} className="btn">Eliminar</button></td>
                         </tr>
                     ))}
 

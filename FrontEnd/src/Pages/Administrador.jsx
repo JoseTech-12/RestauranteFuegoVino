@@ -60,6 +60,14 @@ const Administrador = () => {
             </button>
           </div>
           <div className="colP">
+            <img src={img4} alt="" className="img1" />
+            <button
+              className="btn btn-primary btni">
+              <a href="./mostrarUsuarios">Ver Usuarios</a>
+            </button>
+          </div>
+
+          <div className="colP">
             <img src={img5} alt="" className="img1" />
             <button
               className="btn btn-primary btni"

@@ -12,7 +12,8 @@ import Principal from "../Pages/Principal"
 import MostrarReservas from "../Pages/MostrarReservas"
 import UsuarioProtegido from "../Pages/UsuarioProtegido"
 import LoginProtegido from "../Pages/LoginProtegido"
-import path from "path"
+import MostrarUsuarios from "../Pages/MostrarUsuarios"
+import MostrarMesas from '../Pages/MostrarMesas'
 
 
 const Router = () => {
@@ -38,6 +39,8 @@ const Router = () => {
       <Route path="/RecContra" element={<RecContra />} />
       <Route path="/registrar" element={<CrearCuenta />} />
       <Route path="/MostrarReservas" element={<MostrarReservas />} />
+      <Route path="/mostrarUsuarios" element={<MostrarUsuarios />} />
+      <Route path="/mostrarmesa" element={<MostrarMesas />} />
     </Routes>
   )
 }

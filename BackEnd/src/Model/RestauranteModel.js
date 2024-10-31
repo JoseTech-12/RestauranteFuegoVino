@@ -12,6 +12,24 @@ const getAllReservas = async () => {
     }
 }
 
+const getAllMesas = async () => {
+    try {
+        const mesas = await sql.query('SELECT * FROM Mesa');
+        return mesas.recordset
+    } catch (error) {
+        throw error
+    }
+}
+
+const getUsuarios = async () => {
+    try {
+        const Usuario = await sql.query(' select id_Cliente, Nombre, Telefono, Email from Usuario   ');
+        return Usuario.recordset;
+    } catch (error) {
+        throw error;
+    }
+}
+
 const registrarUsuario = async (nombre, telefono, email, contraseña) => {
 
     try {
@@ -60,7 +78,18 @@ const realizarReserva = async (id_Cliente, id_Mesa, FechaReserva, NumeroPersonas
     }
 
 }
+const deleteReserva = async (id_Reserva) => {
+    try {
+        const conection = await sql.connect()
+        conection.request()
+            .input(id_Reserva, sql.Int, id_Reserva)
+            .query('DELETE FROM Rerserva where id_Reserva=@id_Reseva')
+
+    } catch (error) {
+        console.log(error)
+
+    }
+}
 
 
-
-export { getAllReservas, registrarUsuario, obtenerUsuario, realizarReserva }
+export { getAllReservas, registrarUsuario, obtenerUsuario, realizarReserva, getUsuarios, getAllMesas, deleteReserva }
